@@ -10,9 +10,24 @@
 <body>
 
 <?php
+
 session_start();
-$conn = mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
+class database
+{
+    private static $connection;
+    public static function connect()
+    {
+        self::$connection=mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
+        return self::$connection;
+    }
+}
+
+
+
+//$conn = mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
 $sql = "SELECT filename FROM images";
+
+$conn=database::connect();
 $result = mysqli_query($conn, $sql);
 $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
