@@ -1,6 +1,9 @@
 <?php
 
-function connect()
+class dbbbb
 {
-    return mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
+    public function connect()
+    {
+        return mysqli_connect("127.0.0.1", "marlin", "marlin", "marlin");
+    }
 }

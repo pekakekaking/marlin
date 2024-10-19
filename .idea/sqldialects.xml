@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/11.file.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/11/index.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/11/upload.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/oop/app/database.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/cost_calculator.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/delete.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/proc.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/process.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/upload.php" dialect="GenericSQL" />
   </component>
 </project>

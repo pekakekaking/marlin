@@ -31,9 +31,10 @@ foreach ($_FILES['file']['tmp_name'] as $number => $name) {
         exit;
     }
 }
+$user_id=$_SESSION['user_id'];
 
 foreach ($_FILES['file']['name'] as $filename) {
-    if (!mysqli_query(connect(), "INSERT INTO images (filename) VALUES ('$filename')")) {
+    if (!mysqli_query((new dbbbb)->connect(), "INSERT INTO images (filename,user_id) VALUES ('$filename',$user_id)")) {
         $_SESSION['error'] = 'There was an error saving your file';
         header('Location: index.php');
         exit;

@@ -17,7 +17,7 @@ class database
     private static $connection;
     public static function connect()
     {
-        self::$connection=mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
+        self::$connection=mysqli_connect("127.0.0.1", "marlin", "marlin", "marlin");
         return self::$connection;
     }
 }
@@ -25,10 +25,10 @@ class database
 
 
 //$conn = mysqli_connect("127.0.0.1", "marlin", "AfiDAr3E6LfD6i4S", "marlin");
-$sql = "SELECT filename FROM images";
+$query = "SELECT filename,user_id FROM images";
 
 $conn=database::connect();
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $query);
 $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
@@ -69,10 +69,12 @@ $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         <div class="w-[600px] grid grid-cols-2 md:grid-cols-3 gap-4">
             <?php foreach ($images as $image): ?>
+            <?php if ($image['user_id']==$_SESSION['user_id']):?>
                 <div>
                     <img class="h-auto max-w-full rounded-lg"
                          src="uploads/<?php echo $image['filename']; ?>" alt="">
                 </div>
+            <?php endif;?>
             <?php endforeach; ?>
         </div>
     </div>
