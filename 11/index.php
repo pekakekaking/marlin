@@ -65,6 +65,7 @@ $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
                             ?></a>
                 </li>
+                <?php if(!isset($_SESSION['user_id'])):?>
                 <li>
                     <a href="register.php"
                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Register</a>
@@ -73,10 +74,13 @@ $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <a href="login.php"
                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
                 </li>
+                <?php endif;?>
+                <?php if(isset($_SESSION['user_id'])):?>
                 <li>
                     <a href="logout.php"
                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</a>
                 </li>
+                <?php endif;?>
             </ul>
         </div>
     </div>
