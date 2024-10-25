@@ -21,7 +21,7 @@ session_start();
             <h1 class="max-w-2xl mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl dark:text-white">
                 Конвертер валют</h1>
             <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Введите
-                сумму, которую вы хотите сконвертировать в тенге, выберите исходную валюту и нажмите
+                сумму, которую вы хотите сконвертировать в rub, выберите исходную валюту и нажмите
                 "Конвертировать".</p>
 
             <?php if (isset($_SESSION['message'])): ?>
