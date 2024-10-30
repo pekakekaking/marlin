@@ -10,7 +10,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Location: index.php');
     exit;
 }
-
-$selectAll = "SELECT * FROM tasks";
-$result = mysqli_query($conn, $selectAll);
-$fetchTasks = mysqli_fetch_all($result);

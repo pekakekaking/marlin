@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-require_once "back_index_store.php";
+require_once "back_index.php";
 require_once 'back_complete.php';
 ?>
 
