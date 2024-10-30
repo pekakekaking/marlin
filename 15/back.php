@@ -47,6 +47,6 @@ $posts = [
             видом искусства и какие направления в ней существуют.'],
 ];
 
-$paginate = 6;
+$paginate = 3;
 (int)$pages = ceil(count($posts) / $paginate);
 $postsPerPage = array_chunk($posts, $paginate);
